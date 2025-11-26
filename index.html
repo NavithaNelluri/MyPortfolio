@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      
+      <div>
+        <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Navitha Nelluri</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Profile-Photo.png" alt="Navitha Nelluri picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Navitha Nelluri</h1>
+        <p class="section__text__p2">Full Stack Developer</p>
+        <p class="section__text__p1">Explore my portfolio to discover my latest work!</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('assets/Navitha_Nelluri_Apple_Resume.pdf')">
+            Download CV
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin-logo.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/navithhan/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/dashboard'"
+          />
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="about">
+      <h1 class="centerinfo">Education</h1>
+      <p class="centerinfo">Flip the cards for more information</p>
+    <div class="timeline">
+      <!-- Timeline Item 1 (Left) -->
+      <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-arrow"></div>
+          <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img class = "cusublogo" src="assets/logo-csusb-Photoroom.png">
+                 <h4 class="paragraph">California State University, <br> San Bernardino</h4>
+                 <p class="paragraph">Master's in Computer Science</p>
+                 <p class="paragraph">January 2023 - December 2024 </p>
+                 <p class="paragraph">GPA: 3.7/4.0</p>
+                </div>
+                
+                  <div class="card-back">
+                      <h3>Relevant Courses</h3>
+
+                      <ul>
+                          <li class="paragraph">Software Engineering</li>
+                          <li class="paragraph">Artificial Intelligence</li>
+                          <li class="paragraph">Machine Learning</li>
+                          <li class="paragraph">Theory of Algorithms</li>
+                          <li class="paragraph">Web Development</li>
+                          <li class="paragraph">Operating Systems</li>
+                          
+                      </ul>
+                      <img class="backpic" src="assets/web-developer.png">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Timeline Item 2 (Right) -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-arrow-left"></div>
+        <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img class = "cusublogo" src="assets/mrecw-logo.png">
+               <h4 class="paragraph">Malla Reddy Engineering <br> College for Women</h4>
+               <p class="paragraph">Bachelor's in Electronics and Communication Engineering</p>
+               <p class="paragraph">July 2017 - May 2021 </p>
+               <p class="paragraph">GPA: 3.5/4.0</p>
+              </div>
+              
+                <div class="card-back">
+                  <h3>Relevant Courses</h3>
+
+                    <ul>
+                        <li class="paragraph">C Programming</li>
+                        <li class="paragraph">Python</li>
+                        <li class="paragraph">Java</li>
+                        <li class="paragraph">Object Oriented Programming</li>
+                        <li class="paragraph">VLSI</li>
+                        <li class="paragraph">Embedded Systems</li>
+                        
+                    </ul>
+                    <img class="backpic" src="assets/bachelors-image.png">
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    
+    <hr>
+
+    <section>
+      <h1 class="centerinfo" id="experience">Work Experience</h1>
+      <p class="centerinfo">Flip the cards for more information</p>
+      <div class="timeline">
+        <!-- Timeline Item 1 (Left) -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-arrow"></div>
+            <div class="card">
+                <div class="card-inner">
+                  <div class="card-front">
+                    <img class = "cusublogo" src="assets/logo-csusb-Photoroom.png">
+                   <h4 class="paragraph">California State University, <br> San Bernardino</h4>
+                   <p class="paragraph">Instruction Student Assistant</p>
+                   <p class="paragraph">January 2023 - December 2024 </p>
+                  </div>
+                  
+                    <div class="card-back">
+                        
+                      <ul>
+                        <li>Built responsive, accessible, and pixel-perfect UIs using React, JavaScript, and Tailwind CSS, improving usability for 500+ students.</li>
+                        <li>Optimized React components and state management to reduce load time by 35% and improve overall performance.</li>
+                        <li>Integrated REST APIs for real-time data updates and streamlined interactions across student-facing dashboards.</li>
+                        <li>Implemented reusable UI components and design systems, reducing new feature development time by 20%.</li>
+                        <li>Collaborated with designers, faculty, and IT teams to deliver high-quality features aligned with UX and accessibility standards.</li>
+                        
+                        
+                      </ul>
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Timeline Item 2 (Right) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-arrow-left"></div>
+          <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img class = "cusublogo" src="assets/accenture.png">
+                 <h4 class="paragraph">Accenture Services Pvt Ltd <br> Hyderabad</h4>
+                 <p class="paragraph">Application Development Associate</p>
+                 <p class="paragraph">Auust 2021 - Feb 2023 </p>
+                </div>
+                
+                  <div class="card-back">
+                     
+  
+                    <ul>
+                      <li>Developed secure, scalable web applications using JavaScript, REST APIs, and modern front-end best practices.</li>
+                      <li>Improved data reliability by 25% through optimized API integration, robust error handling, and security enhancements.</li>
+                      <li>Redesigned UI flows and interactions, improving user task completion speed by 15%.</li>
+                      <li>Executed unit testing, debugging, and code reviews within Agile sprints, reducing regression issues by 30%.</li>
+                      <li>Built reusable UI components to maintain consistency and reduce redundant code across features.</li>
+                      <li>Optimized data-fetching & caching strategies, reducing API latency and improving load performance.</li>
+                      
+
+                  </ul>
+                  
+                  
+                      
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- Timeline Item 3 (Left) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-arrow"></div>
+          <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img class = "cusublogo" src="assets/dxc technology.png">
+                 <h4 class="paragraph">DXC Technology <br> Hyderabad</h4>
+                 <p class="paragraph">Internship</p>
+                 <p class="paragraph">June 2020 - July 2021 </p>
+                </div>
+                
+                  <div class="card-back">
+                    <ul>
+
+                      <li>Automated backend workflows and optimized Python pipelines, reducing processing time by 35%.</li>
+                      <li>Migrated legacy scripts to modern, modular frameworks to enhance maintainability and scalability.</li>
+                      <li>Integrated backend services with front-end components to enable seamless data flow across internal tools.</li>
+                      <li>Developed monitoring scripts to track pipeline health, reducing debugging time by 20%.</li>
+                      <li>Improved system modularity by converting monolithic scripts into reusable and testable modules.</li>
+                      <li>Collaborated with senior developers to implement performance improvements and robust error-handling.</li>
+                      
+
+                     
+                    </ul>
+                  
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </section>
+    <hr>
+
+    
+
+    <div>
+      <h1>My Skills</h1>
+      <p>1 - Basic | 2 – Entry-Level | 3 - Intermediate | 4 - Advanced | 5 - Expert</p>
+      
+      <div id="skills">
+
+  <!-- Front-End Skills -->
+  <div class="skill-section">
+    <h3>Front-End Development</h3>
+
+    <div class="skill">
+      <p>HTML5</p>
+      <div class="bar">
+        <div class="fill" data-width="100%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>CSS3</p>
+      <div class="bar">
+        <div class="fill" data-width="100%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="bar">
+        <div class="fill" data-width="80%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>React.js</p>
+      <div class="bar">
+        <div class="fill" data-width="80%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <p>Tailwind CSS</p>
+      <div class="bar">
+        <div class="fill" data-width="80%"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+      
+        <!-- Full-Stack Skills -->
+       <div class="skill-section">
+  <h3>Full-Stack Development</h3>
+
+  <div class="skill">
+    <p>Python</p>
+    <div class="bar">
+      <div class="fill" data-width="100%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>Django</p>
+    <div class="bar">
+      <div class="fill" data-width="80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>SQL</p>
+    <div class="bar">
+      <div class="fill" data-width="80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>PostgreSQL</p>
+    <div class="bar">
+      <div class="fill" data-width="80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>APIs</p>
+    <div class="bar">
+      <div class="fill" data-width="80%"></div>
+    </div>
+  </div>
+
+</div>
+
+    
+    <hr>
+    
+    <div class="projects-container" id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-row">
+          <div class="project-card">
+              <h3>Ecommerece Web Page</h3>
+              <img src="assets/EcommerceWebsite.png" alt="Project 1">
+              
+              <p>Developed a full-stack ecommerce platform using React, MongoDB, and Stripe for seamless online transactions.</p>
+              <p><strong>Tools Used:</strong> React, MongoDB, Stripe</p>
+              <a href="https://github.com/NavithaNelluri/forever-full-stack" target="_blank" class="view-button buttonproject">Open Code</a>
+          </div>
+  
+          <div class="project-card">
+              <h3>Guess My Number</h3>
+              <img src="assets/Number Guessing Game.png" alt="Guess My Number">
+              <p>Developed a number-guessing game where the user has to guess a randomly generated number within a limited range.</p>
+              <p><strong>Tools Used:</strong> JavaScript, HTML, CSS, DOM Manipulation, Event Handling.</p>
+              <a href="https://github.com/NavithaNelluri/NumberGuessingGameUsingJavaScript" target="_blank" class="view-button buttonproject">Open Code</a>
+          </div>
+  
+          <div class="project-card">
+              <h3>Social Book</h3>
+              <img src="assets/SocialBook.png" alt="Social Book">
+              <p>Built a social media platform clone that allows users to create and share posts, like and comment on others content</p>
+              <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, DOM Manipulation, Responsive Design.</p>
+              <a href="https://github.com/NavithaNelluri/SocialBook" target="_blank" class="view-button buttonproject">Open Code</a>
+          </div>
+          
+      </div>
+      <!-- Second Row -->
+    <div class="projects-row">
+      <div class="project-card">
+          <h3>Staybnb</h3>
+          <img src="assets/Staybnb 1.png" alt="staybnb">
+          <p>Built a static landing page for Staybnb using HTML and CSS, showcasing properties and booking options with a clean, user-friendly design.</p>
+          <p><strong>Tools Used:</strong> HTML, CSS, Static Web Design</p>
+          <a href="https://github.com/NavithaNelluri/Staybnb" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+
+      <div class="project-card">
+          <h3>Food Delivery Website</h3>
+          <img src="assets/Fooddel 1.png" alt="Food Delivery">
+          <p>Developed a Full Stack Food Ordering Website using the MERN stack, featuring an Admin Panel, seamless food ordering, and online payment integration.</p>
+          <p><strong>Tools Used:</strong> React.js, Node.js, Express.js, MongoDB, JWT Authentication, CSS</p>
+          <a href="https://github.com/NavithaNelluri/food-del" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+
+      <div class="project-card">
+          <h3>Linkedin Clone</h3>
+          <img src="assets/Linkedin 1.png" alt="Linkedin Clone">
+          <p>Created a LinkedIn Clone using HTML and CSS, replicating the LinkedIn layout with a focus on a clean, responsive design. The project demonstrates the use of Flexbox and Grid</p>
+          <p><strong>Tools Used:</strong> HTML, CSS, Flexbox, CSS Grid</p>
+          <a href="https://github.com/NavithaNelluri/linkedin" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+  </div>
+
+  <div class="projects-row">
+      <div class="project-card">
+          <h3>Youtube clone</h3>
+          <img src="assets/Youtube clone 1.png" alt="Youtube clone">
+          <p>Developed a YouTube Clone using React, replicating the layout and functionalities of the platform.</p>
+          <p><strong>Tools Used:</strong> React, JavaScript, CSS, React Hooks, YouTube API.</p>
+          <a href="https://github.com/NavithaNelluri/youtube-clone-react" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+
+      <div class="project-card">
+          <h3>Basic Caluclator</h3>
+          <img src="assets/Caluclator.png" alt="Basic Caluclator">
+          <p>Created a basic calculator using HTML, CSS, and JavaScript. The calculator supports all fundamental operations.</p>
+          <p><strong>Tools Used:</strong> HTML, CSS, JavaScript</p>
+          <a href="https://github.com/NavithaNelluri/Caluclator" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+
+      <div class="project-card">
+          <h3>Current Time Genarator</h3>
+          <img src="assets/Clock.png" alt="Clock">
+          <p>Developed a digital clock that displays the current time, updating in real-time. The clock is styled using CSS</p>
+          <p><strong>Tools Used:</strong> HTML, CSS, JavaScript</p>
+          <a href="https://github.com/NavithaNelluri/DigitalClock" target="_blank" class="view-button buttonproject">Open Code</a>
+      </div>
+  </div>
+  <div class="projects-row">
+    <div class="project-card">
+        <h3>College Website</h3>
+        <img src="assets/College Website 1.png" alt="College Website">
+        <p>Built a responsive college website using React, providing information on courses, departments, faculty, and campus activities</p>
+        <p><strong>Tools Used:</strong> React, CSS/Tailwind CSS, React Router.</p>
+        <a href="https://github.com/NavithaNelluri/CollegeWebsiteUsingReact/tree/main" target="_blank" class="view-button buttonproject">Open Code</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Loan Approval Prediction</h3>
+        <img src="assets/Loanapproval.jpg" alt="Loan Approval Prediction">
+        <p>Developed a Loan Approval Prediction model using machine learning algorithms to predict the likelihood of loan approval based on applicant data</p>
+        <p><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Machine Learning, Data Preprocessing</p>
+        <a href="https://github.com/NavithaNelluri/ML-Projects/tree/main/LoanApprovalPrediction" target="_blank" class="view-button buttonproject">Open Code</a>
+    </div>
+
+    
+</div>
+  </div>
+  
+
+    <hr>
+    <section id="certifications">
+      <h2 class="centerinfo">Certifications</h2>
+      <div class="container">
+        
+          
+
+          <!-- Certification Container -->
+          <div class="certification-box">
+
+              <!-- Left Side - Certificate Image -->
+              <div class="certificate-image">
+                  <img src="assets/python golden badge.png" alt="Python Gold Badge from HackerRank">
+              </div>
+
+              <!-- Right Side - Certification Details -->
+              <div class="certificate-info">
+                  <h3>Python Gold Badge from HackerRank</h3>
+                  <p>
+                      <strong>Skills:</strong> Core Python, Data Structures (Lists, Sets, Dicts), OOP, Algorithms, File Handling, Generators, and Python Libraries
+                  </p>
+                  <a href="https://www.hackerrank.com/certificates/bacec006f1d7" target="_blank" class="view-button">View Certificate</a>
+              </div>
+
+          </div>
+
+      </div>
+
+      <div class="container">
+          
+
+        <!-- Certification Container -->
+        <div class="certification-box">
+
+            <!-- Left Side - Certificate Image -->
+            <div class="certificate-image">
+                <img src="assets/se-certificate.png" alt="Software Engineering">
+            </div>
+
+            <!-- Right Side - Certification Details -->
+            <div class="certificate-info">
+                <h3>Software Engineering certificate </h3>
+                <p>
+                    <strong>Skills:</strong> Software Design Principles (SOLID), Data Structures, Algorithms, OOP, Design Patterns, Code Optimization, Testing, Version Control (Git), and System Design Basics.
+                </p>
+                <a href="https://www.hackerrank.com/certificates/dc531915c64b" target="_blank" class="view-button">View Certificate</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+          
+
+      <!-- Certification Container -->
+      <div class="certification-box">
+
+          <!-- Left Side - Certificate Image -->
+          <div class="certificate-image">
+              <img src="assets/SQL Golden Badge.png" alt="SQL Gold Badge from HackerRank">
+          </div>
+
+          <!-- Right Side - Certification Details -->
+          <div class="certificate-info">
+              <h3>SQL Gold Badge from HackerRank</h3>
+              <p>
+                  <strong>Skills:</strong> SQL Queries (SELECT, JOINs, Subqueries), Aggregate Functions, Window Functions, CTEs, Data Manipulation (INSERT, UPDATE, DELETE), Constraints
+              </p>
+              <a href="https://www.hackerrank.com/certificates/eb9265cef55a" target="_blank" class="view-button">View Certificate</a>
+          </div>
+
+      </div>
+
+  </div>
+
+  <div class="container">
+          
+
+    <!-- Certification Container -->
+    <div class="certification-box">
+
+        <!-- Left Side - Certificate Image -->
+        <div class="certificate-image">
+            <img src="assets/react.png" alt="React (Basic) Certificate">
+        </div>
+
+        <!-- Right Side - Certification Details -->
+        <div class="certificate-info">
+            <h3>React Certificate</h3>
+            <p>
+                <strong>Skills:</strong> JSX, Components (Functional & Class), Props & State, Hooks (useState, useEffect, useContext), Event Handling, Routing (React Router), Context API
+            </p>
+            <a href="https://www.hackerrank.com/certificates/b57845d616fb" target="_blank" class="view-button">View Certificate</a>
+        </div>
+
+    </div>
+
+</div>
+
+  </section>
+    <hr>
+
+    <footer>
+      <h3 class="contact">Contact Me</h3>
+<div class="footer-container" id="contact">
+    <a href="https://github.com/NavithaNelluri" target="_blank">
+        <i class="fab fa-github"></i> <!-- GitHub Icon -->
+    </a>
+    <a href="mailto:nellurinavitha@gmail.com">
+        <i class="fas fa-envelope"></i> <!-- Email Icon -->
+    </a>
+    <a href="https://www.hackerrank.com/profile/nellurinavitha" target="_blank">
+        <i class="fab fa-hackerrank"></i> <!-- HackerRank Icon -->
+    </a>
+    <a href="https://www.linkedin.com/in/navithhan/" target="_blank">
+        <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+    </a>
+</div>
+
+  </footer>
+  <script src="script.js"></script>
+
+      
+</body>
+</html>
+
+
+      
+
+
+
+
