@@ -943,3 +943,564 @@ h1, p {
   background-color: #671ae2;
   transition: width 3s ease;
 }
+
+
+/* ===========================
+   PREMIUM SCROLL REVEAL
+=========================== */
+
+.reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+.reveal-up {
+  transform: translateY(60px);
+}
+
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
+.reveal-active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0,0);
+}
+
+
+
+
+/* =========================================================
+   PREMIUM ANIMATIONS ADD-ON
+=========================================================*/
+
+/* NAVBAR UNDERLINE */
+.nav-links li a{
+  position: relative;
+}
+.nav-links li a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#47b4ee;
+  left:50%;
+  bottom:-6px;
+  transform:translateX(-50%);
+  transition:0.3s ease;
+}
+.nav-links li a:hover::after{
+  width:100%;
+}
+
+/* FLOATING PROFILE IMAGE */
+.section__pic-container img{
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+
+/* TIMELINE DOT PULSE EFFECT */
+.timeline-dot{
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(71,180,238,.7);}
+  70%{box-shadow:0 0 0 12px rgba(71,180,238,0);}
+  100%{box-shadow:0 0 0 0 rgba(71,180,238,0);}
+}
+
+/* PROJECT CARD LIFT */
+.project-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover{
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:0px 18px 30px rgba(0,0,0,0.15);
+}
+
+/* CERTIFICATION GLOW */
+.certification-box{
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certification-box:hover{
+  transform:scale(1.02);
+  box-shadow:
+    0px 0px 10px rgba(71,180,238,0.7),
+    0px 0px 18px rgba(71,180,238,0.4);
+}
+
+/* BUTTON GLOW */
+.btn, .view-button{
+  transition:0.3s ease;
+}
+.btn:hover,
+.view-button:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 0 10px rgba(71,180,238,.6),
+    0 0 20px rgba(71,180,238,.2);
+}
+
+/* FOOTER ICON BOUNCE */
+.footer-container a:hover{
+  animation:bounce 0.5s ease;
+}
+@keyframes bounce{
+  0%{transform:translateY(0) scale(1);}
+  50%{transform:translateY(-8px) scale(1.15);}
+  100%{transform:translateY(0) scale(1.1);}
+}
+
+/* ======================
+   SKILL BAR SHIMMER
+======================*/
+.fill{
+  position:relative;
+  overflow:hidden;
+}
+.fill::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-40%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.4),
+      transparent
+  );
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer{
+  0%{left:-40%;}
+  100%{left:120%;}
+}
+
+/* ======================
+   REVEAL ANIMATIONS
+======================*/
+.reveal-up, .reveal-left, .reveal-right, .reveal-down {
+  opacity:0;
+  filter:blur(5px);
+  transition:all 1s ease;
+}
+.reveal-up{ transform:translateY(60px); }
+.reveal-left{ transform:translateX(-80px); }
+.reveal-right{ transform:translateX(80px); }
+.reveal-down{ transform:translateY(-60px); }
+
+.reveal-active{
+  opacity:1;
+  filter:blur(0);
+  transform:translate(0,0);
+}
+
+/* ======================
+   SKILL MOVING MARKER
+======================*/
+.bar{
+  position:relative;
+}
+.skill-mark{
+  position:absolute;
+  top:-25px;
+  transform:translateX(-50%);
+  font-size:13px;
+  font-weight:600;
+  background:white;
+  color:black;
+  padding:2px 6px;
+  border:1px solid black;
+  border-radius:6px;
+}
+
+
+
+
+/* ===============================
+   PREMIUM UI + ANIMATIONS
+================================*/
+
+/* ========= THEME ======== */
+:root{
+  --accent:#38bdf8;
+  --bg:#fff;
+  --text:#000;
+  --card:#fff;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+body.dark-mode{
+  --bg:#050816;
+  --text:#f3f4f6;
+  --card:#0b1120;
+
+  background: radial-gradient(circle at 0% 0%, #1d1b4c, #050816 40%, #020617 80%);
+  background-size:250% 250%;
+  animation:gradMove 20s infinite alternate;
+}
+
+@keyframes gradMove{
+  from{background-position:0% 0%;}
+  to{background-position:100% 100%;}
+}
+
+/* ========= DARK MODE BUTTON ======== */
+#theme-toggle{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  z-index:5000;
+}
+
+/* ========= LOADER ======== */
+#loader-overlay{
+  position:fixed;
+  inset:0;
+  background:#020617;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.loader-spinner{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:4px solid #555;
+  border-top-color:var(--accent);
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to{ transform:rotate(360deg) }
+}
+
+/* ========= CURSOR GLOW ======== */
+.cursor-glow{
+  position:fixed;
+  width:160px;
+  height:160px;
+  background:radial-gradient(circle, rgba(56,189,248,.35) 0%, transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:999;
+}
+
+/* ========= FLOAT PROFILE ======== */
+.section__pic-container img{
+  animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+  100%{transform:translateY(0)}
+}
+
+/* ========= REVEALS ======== */
+.reveal-up,.reveal-left,.reveal-right,.reveal-down{
+  opacity:0;
+  filter:blur(5px);
+  transition:1s ease;
+}
+
+.reveal-up{transform:translateY(60px)}
+.reveal-left{transform:translateX(-70px)}
+.reveal-right{transform:translateX(70px)}
+.reveal-down{transform:translateY(-50px)}
+
+.reveal-active{
+  opacity:1;
+  filter:blur(0);
+  transform:none;
+}
+
+/* ========= TIMELINE DOT PULSE ======== */
+.timeline-dot{
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(56,189,248,.7)}
+  70%{box-shadow:0 0 0 12px rgba(56,189,248,0)}
+  100%{box-shadow:0 0 0 0 rgba(56,189,248,0)}
+}
+
+/* ========= SKILL SHIMMER ======== */
+.fill::after{
+  content:"";
+  position:absolute;
+  width:40%;
+  height:100%;
+  top:0;
+  left:-40%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
+  animation:shimmer 2s infinite;
+}
+
+@keyframes shimmer{
+  0%{left:-40%}
+  100%{left:120%}
+}
+
+/* ===== MOVING % MARK ===== */
+.bar{position:relative;}
+.skill-mark{
+  position:absolute;
+  top:-24px;
+  transform:translateX(-50%);
+  background:#fff;
+  padding:2px 6px;
+  border-radius:6px;
+  font-size:12px;
+  border:1px solid black;
+}
+
+body.dark-mode .skill-mark{
+  background:#111;
+  color:#fff;
+  border-color:#555;
+}
+
+/* ========= BUTTON GLOW ======== */
+.btn:hover,.view-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 10px rgba(1, 2, 2, 0.6),
+             0 0 20px rgba(56,189,248,.3);
+}
+
+/* ========= ICON BOUNCE ======== */
+.footer-container a:hover{
+  animation:bounce .45s;
+}
+
+@keyframes bounce{
+  0%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-8px) scale(1.15)}
+  100%{transform:translateY(0) scale(1.1)}
+}
+
+/* ========= TILT CARDS ======== */
+.tilt-card{
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+
+/* SCROLL PROGRESS BAR */
+#scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0;
+  background:linear-gradient(90deg,#38bdf8,#9f6cff);
+  z-index:9999;
+}
+
+
+/* CLICK RIPPLE */
+.btn,.view-button{
+  position:relative;
+  overflow:hidden;
+}
+
+.ripple{
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:rgba(255,255,255,.6);
+  border-radius:50%;
+  animation:ripple .6s ease-out forwards;
+}
+
+@keyframes ripple{
+  from{transform:scale(0); opacity:1;}
+  to{transform:scale(12); opacity:0;}
+}
+
+
+.project-card{
+  transition-delay:
+    calc(var(--i) * 120ms);
+}
+
+.footer-container i{
+  animation: floatIcons 3s ease-in-out infinite;
+}
+
+.footer-container a:nth-child(2) i{ animation-delay:.2s }
+.footer-container a:nth-child(3) i{ animation-delay:.4s }
+.footer-container a:nth-child(4) i{ animation-delay:.6s }
+
+@keyframes floatIcons{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+.section-whoosh{
+  opacity:0;
+  transform: translateY(120px) scale(.95);
+  transition: 1.2s cubic-bezier(.16,1,.3,1);
+}
+.section-whoosh.show{
+  opacity:1;
+  transform: translateY(0) scale(1);
+}
+
+
+
+/* ===========================
+   SAFE PREMIUM ANIMATIONS
+   (APPEND ONLY – DO NOT REPLACE)
+=========================== */
+
+/* Smooth fade-up reveal */
+.reveal-up{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+.reveal-active{
+  opacity:1;
+  transform:none;
+}
+
+/* Floating hero image */
+.section__pic-container img{
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* Glass effect for cards */
+.card,
+.project-card,
+.certification-box{
+  backdrop-filter:blur(7px);
+}
+
+/* Smooth project image zoom */
+.project-card img{
+  transition:.4s ease;
+}
+.project-card:hover img{
+  transform:scale(1.08);
+}
+
+/* Timeline pulse */
+.timeline-dot{
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(56,189,248,.6)}
+  70%{box-shadow:0 0 0 12px rgba(56,189,248,0)}
+  100%{box-shadow:0 0 0 0 rgba(56,189,248,0)}
+}
+
+/* Button glow */
+.btn:hover,
+.view-button:hover{
+  box-shadow:
+   0 0 10px rgba(56,189,248,.5),
+   0 0 20px rgba(56,189,248,.15);
+}
+
+/* Footer icon float */
+.footer-container i{
+  animation:softFloat 3s ease-in-out infinite;
+}
+@keyframes softFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+  100%{transform:translateY(0)}
+}
+
+/* Skill shimmer */
+.fill::after{
+  content:"";
+  position:absolute;
+  left:-40%;
+  width:40%;
+  height:100%;
+  background:linear-gradient(120deg,
+      transparent,
+      rgba(255,255,255,.4),
+      transparent);
+  animation:shimmer 2s infinite;
+}
+@keyframes shimmer{
+  from{left:-40%}
+  to{left:120%}
+}
+
+
+/* =====================
+   THEME TOGGLE BUTTON
+===================== */
+
+.theme-toggle{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+
+  background:black;
+  color:white;
+  font-size:20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:0 6px 15px rgba(0,0,0,.3);
+  z-index:9999;
+
+  transition:.3s ease;
+}
+
+.theme-toggle:hover{
+  transform:scale(1.08);
+}
+
+/* Button style changes per mode */
+
+body.dark-mode .theme-toggle{
+  background:white;
+  color:black;
+}
+
+
