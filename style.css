@@ -1164,16 +1164,22 @@ body.dark-mode{
 /* ========= DARK MODE BUTTON ======== */
 #theme-toggle{
   position:fixed;
-  bottom:18px;
-  right:18px;
-  width:44px;
-  height:44px;
+  bottom:20px;
+  right:20px;
+  width:100px;
+  height:100px;
   border-radius:50%;
-  background:#111;
+  background:#020202;
   color:#fff;
   border:none;
   cursor:pointer;
   z-index:5000;
+}
+
+#theme-toggle p{
+  color:#fff;              /* Make text white */
+  margin:0;
+  font-size:15px;
 }
 
 /* ========= LOADER ======== */
@@ -1502,5 +1508,130 @@ body.dark-mode .theme-toggle{
   background:white;
   color:black;
 }
+
+body.dark-mode .theme-toggle p{
+  color:#000000;              /* Make text white */
+  margin:0;
+  font-size:15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===================================================
+   FIXED CINEMATIC DARK MODE – CLEAN & CONSISTENT
+   SAFE APPEND ONLY – DO NOT REPLACE ANYTHING
+=================================================== */
+
+body.dark-mode{
+  background:#75777c !important;
+  color:#f3f4f6;
+}
+
+/* TEXT */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4{
+  color:#f3f4f6 !important;
+}
+
+/* NAVBAR */
+body.dark-mode #desktop-nav{
+  background:#050505 !important;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+body.dark-mode #desktop-nav a{
+  color:#f3f4f6 !important;
+}
+
+body.dark-mode .nav-links a:hover{
+  background:#0b1120 !important;
+}
+
+/* CARDS */
+body.dark-mode .card-front,
+body.dark-mode .card-back,
+body.dark-mode .project-card,
+body.dark-mode .container,
+body.dark-mode .certification-box{
+  background:#1c1d1f !important;
+  color:#f3f4f6 !important;
+  border-color:rgba(255,255,255,.1) !important;
+}
+
+/* TIMELINE */
+body.dark-mode .timeline::before{
+  background:#38bdf8 !important;
+}
+
+body.dark-mode .timeline-dot{
+  background:#38bdf8 !important;
+}
+
+/* ARROWS */
+body.dark-mode .timeline-arrow,
+body.dark-mode .timeline-arrow-left{
+  border-left-color:#38bdf8 !important;
+}
+
+/* SKILL BAR */
+body.dark-mode .bar{
+  background:#1e293b !important;
+}
+
+body.dark-mode .fill{
+  background:#38bdf8 !important;
+}
+
+/* PROJECT TEXT */
+body.dark-mode .project-card p{
+  color:#d1d5db !important;
+}
+
+/* FOOTER */
+body.dark-mode .footer-container a{
+  color:#f3f4f6 !important;
+}
+
+body.dark-mode .footer-container a:hover{
+  color:#38bdf8 !important;
+}
+
+/* SKILL PERCENT TAG */
+body.dark-mode .skill-mark{
+  background:#020617 !important;
+  color:#f3f4f6 !important;
+  border-color:rgba(255,255,255,.15) !important;
+}
+
+/* ICON IMAGES */
+body.dark-mode img{
+  filter:brightness(.95) contrast(1.05);
+}
+
+/* DARK MODE TOGGLE BUTTON */
+body.dark-mode #theme-toggle{
+  background:#f3f4f6 !important;
+  color:#000000 !important;
+}
+
+
+
+body.dark-mode #theme-toggle p,
+body.dark-mode #theme-toggle i{
+  color:#000 !important;
+}
+
+
+
 
 
