@@ -1,121 +1,165 @@
+/* =========================================================
+   EXTRA LARGE / LAPTOP BREAKPOINT
+========================================================= */
+
 @media screen and (max-width: 1400px) {
+
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
   }
+
   .about-containers {
     flex-wrap: wrap;
   }
+
   #contact,
   #projects {
     height: fit-content;
   }
 }
 
+
+/* =========================================================
+   TABLET BREAKPOINT
+========================================================= */
+
 @media screen and (max-width: 1200px) {
+
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
   }
+
   #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
+
   #profile,
   .section-container {
     display: block;
   }
+
   .arrow {
     display: none;
   }
+
   section,
   .section-container {
     height: fit-content;
   }
+
   section {
     margin: 0 5%;
   }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
   }
+
   .about-containers {
     margin-top: 0;
   }
 }
 
+
+/* =========================================================
+   SMALL MOBILE BREAKPOINT
+========================================================= */
+
 @media screen and (max-width: 600px) {
+
   #contact,
   footer {
-    height: 40vh;
+    height: auto;
   }
+
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
+
   article {
     font-size: 1rem;
   }
+
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
   }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
+
   .contact-info-container {
     margin: 0;
   }
+
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
   }
+
   .experience-sub-title {
     font-size: 1.25rem;
   }
+
   .logo {
     font-size: 1.5rem;
   }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
+
   .section__pic-container {
     width: auto;
     height: 46vw;
     justify-content: center;
   }
+
   .section__text__p2 {
     font-size: 1.25rem;
   }
+
   .title {
     font-size: 2rem;
   }
+
   .text-container {
     text-align: justify;
   }
 }
 
-/* =================================================
-   MOBILE RESPONSIVE
-================================================= */
 
-@media (max-width: 768px){
+
+/* =========================================================
+   FULL MOBILE RESPONSIVE FIX (TIMELINE + CARDS + ALL SECTIONS)
+========================================================= */
+
+@media (max-width: 768px) {
+
 
 /* ===========================
    GLOBAL
 =========================== */
+
 section{
   height:auto !important;
   margin:0 1rem !important;
   padding-top:60px !important;
-  padding-bottom:50px !important;
+  padding-bottom:60px !important;
 }
 
 hr{
@@ -130,9 +174,11 @@ p{
   font-size:0.9rem !important;
 }
 
+
 /* ===========================
    NAVBAR
 =========================== */
+
 #desktop-nav{
   display:none !important;
 }
@@ -145,21 +191,23 @@ p{
   position:fixed;
   top:18px;
   right:18px;
-  z-index:3000;
+  z-index:4000;
 }
+
 
 /* ===========================
    PROFILE
 =========================== */
+
 #profile{
   flex-direction:column !important;
   gap:1.5rem !important;
-  margin-top:60px;
+  margin-top:70px !important;
 }
 
 .section__pic-container{
-  width:200px;
-  height:200px;
+  width:200px !important;
+  height:200px !important;
   justify-content:center !important;
 }
 
@@ -173,9 +221,11 @@ p{
   text-align:center;
 }
 
+
 /* ===========================
-   TIMELINE STACK FIX
+   TIMELINE (CRITICAL FIX)
 =========================== */
+
 .timeline{
   width:100% !important;
   padding-top:40px !important;
@@ -187,7 +237,7 @@ p{
 }
 
 .timeline-item{
-  padding:0 0 0 40px !important;
+  padding-left:40px !important;
   justify-content:flex-start !important;
   margin:40px 0 !important;
 }
@@ -197,17 +247,20 @@ p{
   top:15px !important;
 }
 
+/* Hide desktop arrows */
 .timeline-arrow,
 .timeline-arrow-left{
   display:none !important;
 }
 
+
 /* ===========================
    CARDS
 =========================== */
+
 .card{
   width:100% !important;
-  max-width:340px;
+  max-width:100% !important;
   height:auto !important;
   min-height:420px;
 }
@@ -218,16 +271,18 @@ p{
   height:auto !important;
 }
 
-/* Card text spacing */
+/* Improve readability */
 .paragraph,
 .card-back li{
   font-size:0.9rem;
   line-height:1.5;
 }
 
+
 /* ===========================
    SKILLS
 =========================== */
+
 #skills{
   flex-direction:column;
   padding:0 !important;
@@ -241,9 +296,11 @@ p{
   height:18px;
 }
 
+
 /* ===========================
    PROJECTS
 =========================== */
+
 .projects-row{
   flex-direction:column !important;
   align-items:center;
@@ -251,7 +308,7 @@ p{
 
 .project-card{
   width:100%;
-  max-width:340px;
+  max-width:350px;
 }
 
 .project-card img{
@@ -259,9 +316,11 @@ p{
   height:auto;
 }
 
+
 /* ===========================
    CERTIFICATIONS
 =========================== */
+
 .container{
   padding:20px !important;
   max-width:100%;
@@ -272,9 +331,11 @@ p{
   text-align:center;
 }
 
+
 /* ===========================
    FOOTER
 =========================== */
+
 .footer-container{
   flex-wrap:wrap;
   gap:30px !important;
@@ -284,9 +345,11 @@ p{
   font-size:22px !important;
 }
 
+
 /* ===========================
-   DARK MODE TOGGLE
+   DARK MODE BUTTON
 =========================== */
+
 #theme-toggle{
   width:60px !important;
   height:60px !important;
@@ -296,18 +359,18 @@ p{
   display:none;
 }
 
+
 /* ===========================
-   DISABLE HOVER / TILT ON MOBILE
+   TOUCH SAFETY — DISABLE HOVER EFFECTS
 =========================== */
+
 .project-card,
 .card,
 .btn,
-.view-button{
-  transform:none !important;
-}
-
+.view-button,
 .tilt-card{
   transform:none !important;
+  transition:none !important;
 }
 
 }
