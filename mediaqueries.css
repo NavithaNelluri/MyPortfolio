@@ -102,140 +102,212 @@
   }
 }
 
-/* ===============================
-   MOBILE RESPONSIVE FIX (PHONE)
-=============================== */
-@media (max-width: 768px) {
+/* =================================================
+   MOBILE RESPONSIVE
+================================================= */
 
-  /* GLOBAL */
-  section{
-    margin:0 1rem !important;
-    height:auto !important;
-  }
+@media (max-width: 768px){
 
-  h1{
-    font-size:2rem;
-  }
+/* ===========================
+   GLOBAL
+=========================== */
+section{
+  height:auto !important;
+  margin:0 1rem !important;
+  padding-top:60px !important;
+  padding-bottom:50px !important;
+}
 
-  p{
-    font-size:0.95rem;
-  }
+hr{
+  margin:30px 0 !important;
+}
 
-  /* NAV */
-  #desktop-nav{
-    display:none;
-  }
+h1{
+  font-size:2rem !important;
+}
 
-  #hamburger-nav{
-    display:block !important;
-  }
+p{
+  font-size:0.9rem !important;
+}
 
-  /* PROFILE */
-  #profile{
-    flex-direction:column;
-    height:auto;
-    padding-top:100px;
-  }
+/* ===========================
+   NAVBAR
+=========================== */
+#desktop-nav{
+  display:none !important;
+}
 
-  .section__pic-container{
-    width:200px;
-    height:200px;
-    justify-content:center;
-  }
+#hamburger-nav{
+  display:block !important;
+}
 
-  .section__pic-container img{
-    width:100%;
-    height:auto;
-  }
+.hamburger-menu{
+  position:fixed;
+  top:18px;
+  right:18px;
+  z-index:3000;
+}
 
-  /* TIMELINE */
-  .timeline{
-    width:100% !important;
-  }
+/* ===========================
+   PROFILE
+=========================== */
+#profile{
+  flex-direction:column !important;
+  gap:1.5rem !important;
+  margin-top:60px;
+}
 
-  .timeline::before{
-    left:20px !important;
-  }
+.section__pic-container{
+  width:200px;
+  height:200px;
+  justify-content:center !important;
+}
 
-  .timeline-item{
-    padding-left:40px !important;
-    padding-right:0 !important;
-    justify-content:flex-start !important;
-  }
+.section__pic-container img{
+  width:100%;
+  max-width:200px;
+  height:auto;
+}
 
-  .timeline-arrow,
-  .timeline-arrow-left{
-    display:none !important;   /* hide arrows */
-  }
+.section__text{
+  text-align:center;
+}
 
-  .timeline-dot{
-    left:20px !important;
-  }
+/* ===========================
+   TIMELINE STACK FIX
+=========================== */
+.timeline{
+  width:100% !important;
+  padding-top:40px !important;
+  gap:60px !important;
+}
 
-  .card{
-    width:100% !important;
-    max-width:350px;
-    height:auto;
-  }
+.timeline::before{
+  left:18px !important;
+}
 
-  /* PROJECTS */
-  .projects-row{
-    flex-direction:column !important;
-    align-items:center;
-  }
+.timeline-item{
+  padding:0 0 0 40px !important;
+  justify-content:flex-start !important;
+  margin:40px 0 !important;
+}
 
-  .project-card{
-    width:100%;
-    max-width:350px;
-  }
+.timeline-dot{
+  left:18px !important;
+  top:15px !important;
+}
 
-  /* SKILLS */
-  #skills{
-    flex-direction:column;
-    padding:0 !important;
-  }
+.timeline-arrow,
+.timeline-arrow-left{
+  display:none !important;
+}
 
-  .skill-section{
-    width:100% !important;
-  }
+/* ===========================
+   CARDS
+=========================== */
+.card{
+  width:100% !important;
+  max-width:340px;
+  height:auto !important;
+  min-height:420px;
+}
 
-  /* CERTIFICATIONS */
-  .container{
-    padding:20px !important;
-    max-width:100%;
-  }
+.card-front img,
+.card-back img{
+  max-width:200px;
+  height:auto !important;
+}
 
-  .certification-box{
-    flex-direction:column;
-  }
+/* Card text spacing */
+.paragraph,
+.card-back li{
+  font-size:0.9rem;
+  line-height:1.5;
+}
 
-  /* FOOTER */
-  .footer-container{
-    gap:30px !important;
-  }
+/* ===========================
+   SKILLS
+=========================== */
+#skills{
+  flex-direction:column;
+  padding:0 !important;
+}
 
-  .footer-container a{
-    font-size:22px;
-  }
+.skill-section{
+  width:100% !important;
+}
 
-  /* DARK MODE TOGGLE BUTTON */
-  #theme-toggle{
-    width:65px;
-    height:65px;
-    bottom:12px;
-    right:12px;
-  }
+.bar{
+  height:18px;
+}
 
-  #theme-toggle p{
-    font-size:10px;
-  }
+/* ===========================
+   PROJECTS
+=========================== */
+.projects-row{
+  flex-direction:column !important;
+  align-items:center;
+}
 
-  #theme-toggle i{
-    font-size:14px;
-  }
+.project-card{
+  width:100%;
+  max-width:340px;
+}
 
-  /* DISABLE HOVER / TILT ON TOUCH DEVICES */
-  .tilt-card{
-    transform:none !important;
-  }
+.project-card img{
+  width:100%;
+  height:auto;
+}
+
+/* ===========================
+   CERTIFICATIONS
+=========================== */
+.container{
+  padding:20px !important;
+  max-width:100%;
+}
+
+.certification-box{
+  flex-direction:column;
+  text-align:center;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer-container{
+  flex-wrap:wrap;
+  gap:30px !important;
+}
+
+.footer-container a{
+  font-size:22px !important;
+}
+
+/* ===========================
+   DARK MODE TOGGLE
+=========================== */
+#theme-toggle{
+  width:60px !important;
+  height:60px !important;
+}
+
+#theme-toggle p{
+  display:none;
+}
+
+/* ===========================
+   DISABLE HOVER / TILT ON MOBILE
+=========================== */
+.project-card,
+.card,
+.btn,
+.view-button{
+  transform:none !important;
+}
+
+.tilt-card{
+  transform:none !important;
+}
+
 }
