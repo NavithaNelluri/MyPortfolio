@@ -2,7 +2,6 @@
    LAPTOP / LARGE TABLET
 ========================================================= */
 @media screen and (max-width: 1400px) {
-
   #profile {
     height: auto;
     margin-bottom: 6rem;
@@ -184,12 +183,16 @@ p{
 }
 
 
-/* TEXT IMPROVEMENT */
+/* TEXT IMPROVEMENT — FIX FONT SHRINK ISSUE */
 
 .paragraph,
-.card-back li{
-  font-size:0.95rem;
-  line-height:1.5;
+.card-back li {
+  font-size:1.05rem !important;   /* 👈 restores readable size */
+  line-height:1.6;
+}
+
+.card-front h4{
+  font-size:1.15rem !important;
 }
 
 
