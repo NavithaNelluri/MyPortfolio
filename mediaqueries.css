@@ -1,10 +1,16 @@
-/* =========================================================
-   LAPTOP / LARGE TABLET
+/*      ==============================
+   EXTRA LARGE / LAPTOP BREAKPOINT
 ========================================================= */
+
 @media screen and (max-width: 1400px) {
+
   #profile {
-    height: auto;
+    height: 83vh;
     margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
   }
 
   #contact,
@@ -15,8 +21,9 @@
 
 
 /* =========================================================
-   TABLET
+   TABLET BREAKPOINT
 ========================================================= */
+
 @media screen and (max-width: 1200px) {
 
   #desktop-nav {
@@ -27,39 +34,126 @@
     display: flex;
   }
 
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
   section {
-    height: auto;
     margin: 0 5%;
   }
 
   .section__pic-container {
-    width: 260px;
-    height: 260px;
+    width: 275px;
+    height: 275px;
     margin: 0 auto 2rem;
   }
 
-  .nav-links {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+  .about-containers {
+    margin-top: 0;
   }
 }
 
 
 /* =========================================================
-   MOBILE + SMALL TABLET – FULL RESPONSIVE FIX
+   SMALL MOBILE BREAKPOINT
 ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  #contact,
+  footer {
+    height: auto;
+  }
+
+  #profile {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+}
+
+
+
+/* =========================================================
+   FULL MOBILE RESPONSIVE FIX (TIMELINE + CARDS + ALL SECTIONS)
+========================================================= */
+
 @media (max-width: 768px) {
 
 
-/* ------------------------
+/* ===========================
    GLOBAL
-------------------------- */
-
-html,
-body{
-  overflow-x:hidden;
-}
+=========================== */
 
 section{
   height:auto !important;
@@ -77,13 +171,13 @@ h1{
 }
 
 p{
-  font-size:0.95rem !important;
+  font-size:0.9rem !important;
 }
 
 
-/* ------------------------
+/* ===========================
    NAVBAR
-------------------------- */
+=========================== */
 
 #desktop-nav{
   display:none !important;
@@ -95,15 +189,15 @@ p{
 
 .hamburger-menu{
   position:fixed;
-  top:15px;
-  right:15px;
+  top:18px;
+  right:18px;
   z-index:4000;
 }
 
 
-/* ------------------------
+/* ===========================
    PROFILE
-------------------------- */
+=========================== */
 
 #profile{
   flex-direction:column !important;
@@ -119,6 +213,7 @@ p{
 
 .section__pic-container img{
   width:100%;
+  max-width:200px;
   height:auto;
 }
 
@@ -127,9 +222,9 @@ p{
 }
 
 
-/* ------------------------
+/* ===========================
    TIMELINE (CRITICAL FIX)
-------------------------- */
+=========================== */
 
 .timeline{
   width:100% !important;
@@ -139,41 +234,35 @@ p{
 
 .timeline::before{
   left:18px !important;
-  width:4px !important;
 }
 
 .timeline-item{
   padding-left:40px !important;
   justify-content:flex-start !important;
-  margin:60px 0 !important;
+  margin:40px 0 !important;
 }
-
-
-/* DOT FIX */
 
 .timeline-dot{
   left:18px !important;
-  top:25px !important;
+  top:15px !important;
 }
 
-
-/* HIDE DESKTOP ARROWS */
-
+/* Hide desktop arrows */
 .timeline-arrow,
 .timeline-arrow-left{
   display:none !important;
 }
 
 
-/* ------------------------
+/* ===========================
    CARDS
-------------------------- */
+=========================== */
 
 .card{
   width:100% !important;
   max-width:100% !important;
   height:auto !important;
-  min-height:460px !important;
+  min-height:420px;
 }
 
 .card-front img,
@@ -182,35 +271,17 @@ p{
   height:auto !important;
 }
 
-
-/* TEXT IMPROVEMENT — FIX FONT SHRINK ISSUE */
-
+/* Improve readability */
 .paragraph,
-.card-back li {
-  font-size:1.05rem !important;   /* 👈 restores readable size */
-  line-height:1.6;
-}
-
-.card-front h4{
-  font-size:1.15rem !important;
+.card-back li{
+  font-size:0.9rem;
+  line-height:1.5;
 }
 
 
-/* EXTRA SPACE BETWEEN TIMELINE ITEMS */
-
-#about,
-#experience{
-  margin-bottom:100px !important;
-}
-
-.timeline-item{
-  margin-bottom:80px !important;
-}
-
-
-/* ------------------------
+/* ===========================
    SKILLS
-------------------------- */
+=========================== */
 
 #skills{
   flex-direction:column;
@@ -226,9 +297,9 @@ p{
 }
 
 
-/* ------------------------
+/* ===========================
    PROJECTS
-------------------------- */
+=========================== */
 
 .projects-row{
   flex-direction:column !important;
@@ -246,9 +317,9 @@ p{
 }
 
 
-/* ------------------------
+/* ===========================
    CERTIFICATIONS
-------------------------- */
+=========================== */
 
 .container{
   padding:20px !important;
@@ -261,9 +332,9 @@ p{
 }
 
 
-/* ------------------------
+/* ===========================
    FOOTER
-------------------------- */
+=========================== */
 
 .footer-container{
   flex-wrap:wrap;
@@ -275,9 +346,9 @@ p{
 }
 
 
-/* ------------------------
+/* ===========================
    DARK MODE BUTTON
-------------------------- */
+  */
 
 #theme-toggle{
   width:60px !important;
@@ -289,10 +360,9 @@ p{
 }
 
 
-/* ------------------------
-   TOUCH SAFETY
-------------------------- */
-/* Disable hover + tilt transformations on mobile */
+/*
+   TOUCH SAFETY — DISABLE HOVER EFFECTS
+ */
 
 .project-card,
 .card,
